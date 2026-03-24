@@ -284,6 +284,29 @@
       text-decoration: none;
     }
 
+    /* Language Switcher */
+    .lang-switcher {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      z-index: 100;
+      background: rgba(11,15,20,0.8);
+      padding: 0.4rem 0.6rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .lang-switcher a {
+      font-size: 1.3rem;
+      text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.2s;
+    }
+    .lang-switcher a:hover, .lang-switcher a.active {
+      opacity: 1;
+    }
+
     /* Responsive */
     @media (max-width: 640px) {
       body { font-size: 16px; }
@@ -294,6 +317,12 @@
   </style>
 </head>
 <body>
+  <nav class="lang-switcher">
+    <a href="/" class="active" title="English">🇺🇸</a>
+    <a href="/pt/" title="Português">🇧🇷</a>
+    <a href="/es/" title="Español">🇪🇸</a>
+  </nav>
+
   <header class="hero">
     <span class="hero-badge">Manifesto</span>
     <h1>Privacy as Infrastructure for <span>Self-Governing Communities</span></h1>

@@ -3,6 +3,8 @@
   "outputDirectory": "public",
   "routes": [
     { "handle": "filesystem" },
+    { "src": "/pt/?$", "dest": "/pt/index.html" },
+    { "src": "/es/?$", "dest": "/es/index.html" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
